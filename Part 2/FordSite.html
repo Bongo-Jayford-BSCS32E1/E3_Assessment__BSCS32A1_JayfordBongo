@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Website</title>
+  <style>
+    body {
+      background-color: lightblue;
+    }
+    h1, h2, h3 {
+      padding: 20px;
+    }
+    p {
+      font-size: 14px;
+    }
+    li {
+      list-style-type: disc;
+    }
+  </style>
+  <script>
+    function checkEvenOdd(number) {
+      if (number % 2 === 0) {
+        return "Even";
+      } else {
+        return "Odd";
+      }
+    }
+    
+    function displayResult() {
+      const number = parseInt(document.getElementById('numberInput').value, 10);
+      const result = checkEvenOdd(number);
+      document.getElementById('resultDisplay').innerText = result;
+    }
+  </script>
+</head>
+<body>
+  <h1>Welcome to FordSite</h1>
+  <p>Good day to all. Have a nice day!</p>
+  <img src="sunrise.jpg" alt="Relevant Image Description">
+  <ul>
+    <li>Item 1</li>
+    <li>Item 2</li>
+  </ul>
+  <ol>
+    <li>Ordered Item 1</li>
+    <li>Ordered Item 2</li>
+    <li>Ordered Item 3</li>
+  </ol>
+  <p>Visit <a href="http://facebook.com" target="_blank">our website</a> for more info.</p>
+  <h3 style="color: blue;">Want to know if the input is Even or Odd? Try it here down below</h3>
+  
+  <input type="number" id="numberInput" placeholder="Enter a number">
+  <button onclick="displayResult()">Check Even or Odd</button>
+  <p id="resultDisplay"></p>
+</body>
+</html>
